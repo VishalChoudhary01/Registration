@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import './Input.css';
+import './Custominput.css';
+
 
 const Input = ({
   Label,

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Input from "../../Input/Input";
+import Input from "../../Input/CustomInput";
 import Button from "../../Button/Button";
-import './Registration.css';
+import "./Registration.css";
 
 const Registration = () => {
   const [name, setName] = useState("");
@@ -12,7 +12,7 @@ const Registration = () => {
   const [usersData, setUsersData] = useState([]);
 
   useEffect(() => {
-    const storedUsers = JSON.parse(localStorage.getItem('usersData')) || [];
+    const storedUsers = JSON.parse(localStorage.getItem("usersData")) || [];
     setUsersData(storedUsers);
   }, []);
 
@@ -41,7 +41,7 @@ const Registration = () => {
       return;
     }
 
-    const userExists = usersData.some(user => user.name === name);
+    const userExists = usersData.some((user) => user.name === name);
     if (userExists) {
       setNameError("User already exists");
       setSuccess(false);
@@ -73,7 +73,7 @@ const Registration = () => {
             Label={"Full Name"}
             inputChangeEvent={handleNameChange}
             inputError={nameError}
-            value={name} 
+            value={name}
           />
           <Input
             Label={"Password"}
@@ -81,14 +81,18 @@ const Registration = () => {
             placeholderText={"Enter Password"}
             inputChangeEvent={handlePasswordChange}
             inputError={passwordError}
-            value={password} 
+            value={password}
           />
         </div>
         <Button buttonContent={"Register"} buttonType="submit" />
       </form>
 
-      {success === true && <p className="successful">Successfully Registered !!</p>}
-      {success === false && <p className="errorRegisteration">Registration Not Successful !!</p>}
+      {success === true && (
+        <p className="successful">Successfully Registered !!</p>
+      )}
+      {success === false && (
+        <p className="errorRegisteration">Registration Not Successful !!</p>
+      )}
     </>
   );
 };
