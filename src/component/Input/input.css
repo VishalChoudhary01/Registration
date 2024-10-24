@@ -1,0 +1,52 @@
+.customInput {
+    padding: 10px;
+    border: 1px solid #ffffff80; 
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    /* background: rgba(255, 255, 255, 0.2);  */
+    background: transparent;
+    color: white; 
+    transition: border-color 0.3s ease-in-out;
+    margin-bottom: 2%;
+    font-size: 0.9rem;
+}
+
+.customInput::placeholder{
+    color: #b7b2b2;
+    font-style: italic;
+    letter-spacing: 1.5px;
+}
+
+.customInput:focus {
+    border-color: #09ff6f; 
+    outline: none; 
+}
+
+.customInput:disabled {
+    background-color: rgba(245, 245, 245, 0.5); 
+    cursor: not-allowed;
+}
+
+.inputError {
+    color: red;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.Label {
+    margin-bottom: 5px;
+    display: block;
+    color: #fff;
+    font-weight: 400; 
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+}
+
+@media (max-width: 600px) {
+    .customInput {
+        font-size: 0.9rem; 
+        padding: 8px; 
+    }
+}

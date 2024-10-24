@@ -1,0 +1,40 @@
+.CustomButton {
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    padding: 10px 20px; 
+    background-color: #007bff; 
+    color: #ffffff; 
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem; /* Adjust for better readability */
+    box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.2), 
+        inset 0 1px 3px rgba(255, 255, 255, 0.3); 
+    border: 2px solid rgba(255, 255, 255, 0.2); 
+}
+
+.CustomButton:hover {
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #007bff; 
+}
+
+.CustomButton:active {
+    transform: scale(1.05);
+}
+
+.CustomButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+@media (max-width: 600px) {
+    .CustomButton {
+        font-size: 0.9rem; /* Smaller font on small screens */
+        padding: 8px; /* Adjust padding */
+    }
+}
+

@@ -1,0 +1,70 @@
+.login {
+    width: 25%;
+    margin: auto;
+    backdrop-filter: blur(10px); 
+    background-color: var(--form-background);
+    margin: 5% auto;
+    padding:3% 2.5%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    border: 2px solid rgb(156, 152, 152);
+    position: relative;
+}
+.login h3{
+    text-align: center;
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    color: var(--form-heading-txt-color);
+    padding: 1% 0;
+    padding-bottom: 5%;
+}
+.login p{
+    color: aliceblue;
+    font-weight: 400;
+}
+
+.registerToLogin{
+    color:rgb(14, 215, 241);
+
+}
+.formInput{
+    padding-bottom: 5%;
+}
+.successful{
+    padding: 1% 2%;
+    background: rgb(0, 66, 0);
+    color: aliceblue;
+    width: 20%;
+    position: absolute;
+    top: 10%;
+    right: 1%;
+    border-radius: 10px;
+}
+.errorRegisteration{
+    padding: 1% 2%;
+    background: rgb(237, 33, 2);
+    color: aliceblue;
+    width: 20%;
+    position: absolute;
+    top: 12%;
+    right: 1%;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .login{
+        width: 60%;
+    }
+    .login h3{
+        font-size: 15px;
+    }
+}
+@media (max-width: 767px) {
+    .login{
+        width: 60%;
+    }
+    .login h3{
+        font-size: 18px;
+    }
+}
